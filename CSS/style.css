@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lavishly+Yours&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --color-background: #F6E8C6; 
+    --color-footer: #0d0d0d;
+    --color-titulos: #D4A373; 
+    --color-texto: #6D4C41; 
+    --color-boton: #E6B89C; 
+    --color-boton-hover: #DDB892; 
+    --color-card-background: rgba(221, 184, 146, 0.4); 
+    --color-shadow1: rgba(160, 127, 87, 0.8); 
+    --color-shadow2: rgba(150, 106, 62, 0.8); 
+    --color-shadow3: rgba(138, 83, 27, 0.8); 
+    --color-shadow4: rgba(131, 67, 3, 0.71); 
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: var(--color-background);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lavishly Yours", cursive;
+    color: var(--color-titulos);
+    font-style: italic;
+    text-shadow: 0.5px 0.5px 0.5px var(--color-texto);
+}
+span {
+    color: var(--color-texto);
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px var(--color-texto);
+}
+
+/* Header */
+header {
+    background-color: var(--color-background);
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: var(--color-titulos); 
+}
+
+.informacionColor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: var(--color-card-background);
+    border-radius: 10%;
+    width: 30em;
+    height: 20em;
+}
+p {
+    font-size: 1.5em;
+    color: var(--color-texto);
+}
+button {
+    background-color: var(--color-boton);
+    border: none;
+    border-radius: 5%;
+    padding: 0.5em;
+    font-size: 1.5em;
+    color: white;
+    animation: Neon 2s infinite ease-in-out alternate;
+    transition: all 0.3s;
+}
+button:hover {
+    background-color: var(--color-boton-hover);
+    color: white;
+    transform: rotate(5deg) scale(1.1) translate(0.5em,0.5em);
+    box-shadow: 0px 0px 15px 5px var(--color-shadow1);
+    animation: none;
+}
+
+#NombreColor {
+    color: var(--color-texto);
+}
+
+footer
+{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-footer);
+    color: var(--color-texto);
+}
+
+/* Animation */
+@keyframes Neon {
+    0% {
+        border-top: 5px solid var(--color-shadow1);
+        box-shadow: 0px 0px 15px 5px var(--color-shadow1);
+    }
+    50% {
+        border-left: 5px solid var(--color-shadow2);
+        box-shadow: 0px 0px 15px 5px var(--color-shadow2);
+    }
+    75% {
+        border-bottom: 5px solid var(--color-shadow3);
+        box-shadow: 0px 0px 15px 5px var(--color-shadow3);
+    }
+    100% {
+        border-right: 5px solid var(--color-shadow4);
+        box-shadow: 0px 0px 15px 5px var(--color-shadow4);
+    }
+}
